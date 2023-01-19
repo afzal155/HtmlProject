@@ -26,7 +26,7 @@ jobs:
       - name: installing surge
         run: npm install --global surge
 
-      - name: deploying using surge ${{secrets.Deplyment_Token}}
+      - name: deploying using surge
         # add token of surge in secrets in setting of git hub project.
         # running cmd: surge PATH LINK_LIVE-URL --token $ {{add token from git secrets}}
         run: surge ./ learningandtesting.surge.sh --token ${{secrets.Deplyment_Token}}
