@@ -15,12 +15,13 @@ jobs:
 
     steps:
       # checkout repo under github, so your job can access it...
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Installing node..
-        uses: actions/setup-node@v3-beta
+        uses: actions/setup-node@v3
         with:
           node-version: 16
+          check-latest: true
 
       - name: installing surge
         run: npm install --global surge
